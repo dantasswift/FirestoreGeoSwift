@@ -11,6 +11,8 @@
 		D041E32D2C6F784F00FC4F05 /* FirestoreGeoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D041E3222C6F784F00FC4F05 /* FirestoreGeoSwift.framework */; };
 		D041E3322C6F784F00FC4F05 /* FirestoreGeoSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E3312C6F784F00FC4F05 /* FirestoreGeoSwiftTests.swift */; };
 		D041E3332C6F784F00FC4F05 /* FirestoreGeoSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = D041E3252C6F784F00FC4F05 /* FirestoreGeoSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D041E33D2C6F790300FC4F05 /* FireStoreGeoSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D041E33C2C6F790300FC4F05 /* FireStoreGeoSwift.swift */; };
+		D041E3402C6F7BFF00FC4F05 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D041E33F2C6F7BFF00FC4F05 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		D041E3262C6F784F00FC4F05 /* FirestoreGeoSwift.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FirestoreGeoSwift.docc; sourceTree = "<group>"; };
 		D041E32C2C6F784F00FC4F05 /* FirestoreGeoSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirestoreGeoSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D041E3312C6F784F00FC4F05 /* FirestoreGeoSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreGeoSwiftTests.swift; sourceTree = "<group>"; };
+		D041E33C2C6F790300FC4F05 /* FireStoreGeoSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreGeoSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D041E3402C6F7BFF00FC4F05 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +77,7 @@
 			children = (
 				D041E3252C6F784F00FC4F05 /* FirestoreGeoSwift.h */,
 				D041E3262C6F784F00FC4F05 /* FirestoreGeoSwift.docc */,
+				D041E33C2C6F790300FC4F05 /* FireStoreGeoSwift.swift */,
 			);
 			path = FirestoreGeoSwift;
 			sourceTree = "<group>";
@@ -113,6 +118,9 @@
 			dependencies = (
 			);
 			name = FirestoreGeoSwift;
+			packageProductDependencies = (
+				D041E33F2C6F7BFF00FC4F05 /* FirebaseFirestore */,
+			);
 			productName = FirestoreGeoSwift;
 			productReference = D041E3222C6F784F00FC4F05 /* FirestoreGeoSwift.framework */;
 			productType = "com.apple.product-type.framework";
@@ -162,6 +170,9 @@
 				Base,
 			);
 			mainGroup = D041E3182C6F784F00FC4F05;
+			packageReferences = (
+				D041E33E2C6F7BFF00FC4F05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D041E3232C6F784F00FC4F05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D041E3272C6F784F00FC4F05 /* FirestoreGeoSwift.docc in Sources */,
+				D041E33D2C6F790300FC4F05 /* FireStoreGeoSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +423,7 @@
 		D041E33A2C6F784F00FC4F05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FV28DJHR3N;
@@ -427,6 +440,7 @@
 		D041E33B2C6F784F00FC4F05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FV28DJHR3N;
@@ -471,6 +485,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D041E33E2C6F7BFF00FC4F05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D041E33F2C6F7BFF00FC4F05 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D041E33E2C6F7BFF00FC4F05 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D041E3192C6F784F00FC4F05 /* Project object */;
 }
